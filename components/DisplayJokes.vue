@@ -1,17 +1,23 @@
 <template>
   <div class="card">
-    <b-form-textarea id="textarea-plaintext" class="joke-area" plaintext :value="joke"></b-form-textarea>
-    <b-form @submit.prevent="onSubmit" inline>
-      <label class="mb-2 mr-sm-2 mb-sm-0" for="category">Choose a category </label>
-        <b-form-select class="mb-2 mr-sm-2 mb-sm-0" v-model="selected" :options="categories">
-          <template v-slot:first>
-            <b-form-select-option :value="null" disabled>Please select an category</b-form-select-option>
-          </template>
-        </b-form-select>
-      <b-button class="mb-2 mr-sm-2 mb-sm-0" type="submit" variant="success">Generate</b-button>
-      <label class="mb-2 mr-sm-2 mb-sm-0" for="category"> or Generate random joke </label>
-      <b-button class="mb-2 mr-sm-2 mb-sm-0" @click.prevent="generateRandom" variant="outline-primary">Generate</b-button>
-    </b-form>
+    <b-form-group>
+      <b-form-textarea id="textarea-plaintext" class="joke-area" plaintext :value="joke"></b-form-textarea>
+    </b-form-group>
+    
+    <b-form-group>
+      <b-form @submit.prevent="onSubmit" inline>
+        <label class="mb-2 mr-sm-2 mb-sm-0" for="category">Choose a category </label>
+          <b-form-select class="mb-2 mr-sm-2 mb-sm-0" v-model="selected" :options="categories">
+            <template v-slot:first>
+              <b-form-select-option :value="null" disabled>Please select an category</b-form-select-option>
+            </template>
+          </b-form-select>
+        <b-button class="mb-2 mr-sm-2 mb-sm-0" type="submit" variant="success">Generate</b-button>
+        <label class="mb-2 mr-sm-2 mb-sm-0" for="category"> or Generate random joke </label>
+        <b-button class="mb-2 mr-sm-2 mb-sm-0" @click.prevent="generateRandom" variant="outline-primary">Generate</b-button>
+      </b-form>
+    </b-form-group>
+    
   </div>
 </template>
 

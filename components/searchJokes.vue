@@ -1,8 +1,14 @@
 <template>
-  <form @submit.prevent="onSubmit">
-    <input type="text" v-model="text" placeholder="Search Jokes...">
-    <input type="submit" value="Search Jokes">
-  </form>
+  <b-form @submit.prevent="onSubmit">
+    <b-form-group>
+      <b-form-input
+      v-model="text"
+      required
+      placeholder="Search Jokes..."
+      ></b-form-input>
+    </b-form-group>
+    <b-button type="submit" variant="outline-primary">Search Jokes</b-button>
+  </b-form>
 </template>
 
 <script>

@@ -1,7 +1,9 @@
 <template>
-  <div class="joke">
-    <p>{{ joke }}</p>
-  </div>
+  <b-card class="mb-1">
+    <b-card-text>
+      {{ joke }}
+    </b-card-text>
+  </b-card>
 </template>
 
 <script>
