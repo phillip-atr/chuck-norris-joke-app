@@ -1,3 +1,9 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+    router: {
+        base: '/chuck-norris-joke-app/'
+    }
+} : {}
+
 export default {
     /*
      ** Nuxt rendering mode
@@ -53,5 +59,6 @@ export default {
      ** Build configuration
      ** See https://nuxtjs.org/api/configuration-build/
      */
+    ...routerBase,
     build: {}
 }

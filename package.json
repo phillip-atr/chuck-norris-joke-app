@@ -5,6 +5,8 @@
     "scripts": {
         "dev": "nuxt",
         "build": "nuxt build",
+        "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+        "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build && nuxt export",
         "start": "nuxt start",
         "export": "nuxt export",
         "serve": "nuxt serve",
@@ -16,5 +18,7 @@
         "bootstrap-vue": "^2.15.0",
         "nuxt": "^2.13.0"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "cross-env": "^7.0.2"
+    }
 }
