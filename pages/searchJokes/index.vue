@@ -1,9 +1,9 @@
 <template>
-  <b-container class="main">
-    <div class="card">
+  <b-container>
+    <b-card>
       <searchJokes v-on:search-joke="searchJokes"/>
       <Joke v-for="joke in jokes" :key="joke.id" :joke="joke.value"/>
-    </div>
+    </b-card>
   </b-container>
 </template>
 
@@ -44,8 +44,7 @@ export default {
 
 <style>
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 3rem;
-    margin: 2rem;
+    padding: 2rem;
+    margin: 2rem auto;
   }
 </style>

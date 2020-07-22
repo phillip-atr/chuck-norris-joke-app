@@ -16,7 +16,6 @@ export default {
 
 <style>
   .main {
-    text-align: center;
     margin: 2rem auto;
   }
 </style>
